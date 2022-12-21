@@ -21,10 +21,14 @@ footer {
 }
 
 p{
-  color: rgb(231, 213, 213);
+  color: wheat;
   font-size: 18px;
 }
 
 h1, h2, h3, li{
-  color: white;
+  color:white;
+}
+
+li{
+  color: wheat;
 }

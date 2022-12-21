@@ -1,6 +1,6 @@
 #menu {
     float:left;
-    height:450px;
+    height:250px;
     padding:10px 10px;
     width:400px;
   }
@@ -47,9 +47,9 @@
 
   /*seccion blanca*/
   #testimonio {
-    background: rgb(60, 197, 252);
+    background: rgb(20, 165, 129);
     padding: 40px ;   /*Controlamos el espacio arriba y abajo*/
-    height: 760px;
+    height: 600px;
   }
 
   .centrarh1
