@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="../img/icono4.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/stylesPagWeb.css">
+  <!-- BOOTSTRAP CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!--Scrooll Reveal-->
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet" />
+  <!-- BOOTSTRAP 4 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- SCROOLL REVEAL JS LIBRARY CDN -->
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="../css/stylesHomePage.css">
+  <script src="../js/funcionesEjemplos.js"></script>
+  <title>GRUPO04</title>
+</head>
+
+<body>
+
+  <main>
+    <div class="hero">
+      <div class="hero-description">
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div>
+      <header id="home">
+        <div class="w3-top w3-light-gray">
+          <div class="w3-row w3-padding w3-white">
+            <div class="w3-col s3">
+              <a href="../html/homePage.html" class="w3-button w3-block w3-white"> <img src="../img/iconocasa.png"
+                  width="20px" height="20px"> Home</a>
+            </div>
+      </header>
+    </div><br><br>
+
+    <h1 class="text-center">Navegación DOM</h1>
+    <section id="header">
+      <div class="container mt-5">
+        <div class="row d-flex justify-content-center">
+          <div class=" col-md-6 col-sm-6">
+
+            <h3>Navegación entre nodos</h3>
+            <br>
+            <p>parentNode</p>
+            <p>childNodes[nodenumber]</p>
+            <p>firstChild</p>
+            <p>lastChild</p>
+            <p>nextSibling</p>
+            <p>previousSibling</p>
+
+            <br>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonio">
+      <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <h4>Ejemplo de navegación entre nodos con <b>childNodes</b></h4>
+        </div>
+        </p>
+
+
+        <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <br>
+          <p><b>Código</b></p>
+          <p> function nav() {</p>
+          <p>document.getElementById("id02").innerHTML = document.getElementById("id01").childNodes[0].nodeValue;}</p>
+        </div>
+
+        <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <br>
+          <h1 id="id01">Aplicaciones de Tecnologías Web</h1>
+          <button type="submit" onclick="navegar()" class="btn btn-success">Intentalo ahora!</button>
+          <p id="id02"></p>
+
+          <br>
+        </div>
+
+    </section>
+    <br>
+
+    <section id="testimonio">
+      <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <h3 class="text-center">Ejemplo de navegación entre nodos con <b>firstChild</b></h3>
+        </div>
+
+        <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+          <p><b>Código</b></p>
+
+          <pre>
+            <code>              
+              <p>Script</p>
+              document.getElementById("id04").innerHTML = document.getElementById("id03").firstChild.nodeValue;
+            </code> 
+        </pre>
+        </div>
+
+        <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <br>
+          <h1 id="id03">LEO MESSI</h1>
+          <button type="submit" onclick="nodo()" class="btn btn-success">Intentalo ahora</button><br><br>
+          <p id="id04"></p>
+          <br>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+
+</html>

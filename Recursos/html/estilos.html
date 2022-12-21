@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../img/icono4.png">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/stylesPagWeb.css">
+  <!-- BOOTSTRAP CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!--Scrooll Reveal-->
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet" />
+  <!-- BOOTSTRAP 4 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- SCROOLL REVEAL JS LIBRARY CDN -->
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="../css/stylesHomePage.css">
+  <link rel="stylesheet" href="../css/styleEjemplos.css">
+  <script src="../js/funcionesEjemplos.js"></script>
+  <title>GRUPO04</title>
+</head>
+
+<body>
+  <main>
+    <div class="hero">
+      <div class="hero-description">
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div>
+      <header id="home">
+        <div class="w3-top w3-light-gray">
+          <div class="w3-row w3-padding w3-white">
+            <div class="w3-col s3">
+              <a href="../html/homePage.html" class="w3-button w3-block w3-white"> <img src="../img/iconocasa.png"
+                  width="20px" height="20px"> Home</a>
+            </div>
+      </header>
+    </div><br><br>
+
+    <br>
+    <center>
+      <h1>Event Listener DOM</h1>
+    </center>
+
+    <!--Intoducción-->
+    <section id="header">
+      <div class="container mt-5">
+        <div class="row d-flex justify-content-center">
+          <div class=" col-md-6 col-sm-6">
+            <h3 class="text-center">
+              El método addEventListener()</h3><br>
+
+            <p>Es un escuchador que indica al navegador que este atento a la interacción del usuario.
+              La ventaja es que se escribe totalmente en el JS, sin necesidad de tocar el HTML.</p>
+
+            <br>
+            <li>El método addEventListener() adjunta un controlador de eventos al elemento especificado.</li>
+            <li>El método addEventListener() adjunta un controlador de eventos a un elemento sin sobrescribir los
+              controladores de eventos existentes.</li>
+            <li>Puede agregar muchos controladores de eventos del mismo tipo a un elemento, es decir, dos eventos de
+              "clic".</li>
+            <li>Puede agregar detectores de eventos a cualquier objeto DOM, no solo elementos HTML. es decir, el objeto
+              de la ventana.</li>
+            <li>El método addEventListener() facilita el control de cómo reacciona el evento al burbujeo.</li>
+            <li>Cuando se usa el método addEventListener(), el JavaScript se separa del marcado HTML, para una mejor
+              legibilidad y le permite agregar detectores de eventos incluso cuando no controla el marcado HTML.</li>
+            <li>Puede eliminar fácilmente un detector de eventos mediante el método removeEventListener().</li>
+
+            <br>
+            <br>
+
+            <h3 class="text-center">Sintaxis</h3>
+
+            <p class="text-center"><b>element.addEventListener(event, function, useCapture);</b></p>
+
+            <li>El primer parámetro es el tipo de evento (como "clic" o "mousedown" o cualquier otro evento HTML DOM).
+            </li>
+            <li>El segundo parámetro es la función que queremos llamar cuando ocurra el evento.</li>
+            <li>El tercer parámetro es un valor booleano que especifica si se debe usar el burbujeo de eventos o la
+              captura de eventos. Este parámetro es opcional.</li>
+
+          </div>
+
+        </div>
+      </div>
+      </div>
+      <br><br><br>
+    </section>
+
+    <!--Primer ejemplo-->
+
+    <section id="testimonio">
+      <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <h4>Agregar un controlador de eventos a un elemento</h4>
+        </div>
+        </p>
+
+
+        <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <p><b>Código</b></p>
+          <p>document.getElementById("myBtn").addEventListener("click", function() {</p>
+          <p>document.getElementById("myBtn").innerHTML="Aplicaciones de Tecnologías Web";</p>
+          <p>});</p>
+        </div>
+        <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <br>
+          <br>
+          <button id="myBtn" onclick="añadirEventosListener()" class="btn btn-success">Intentalo</button>
+          <br>
+        </div>
+
+    </section>
+    <br>
+
+    <!--Segundo ejemplo-->
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      <h3 class="text-center">Agregue muchos controladores de eventos al mismo elemento</h3>
+    </div>
+    <section id="header">
+      <div class="container mt-5">
+        <div class="row">
+          <div class=" col-md-6 col-sm-6">
+
+            <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+              <p><b>Código</b></p>
+
+              <p>var x = document.getElementById("myBtn");</p>
+                <p>x.addEventListener("mouseover", myFunction);</p>
+                <p> x.addEventListener("click", mySecondFunction);</p>
+                  <p>x.addEventListener("mouseout", myThirdFunction);</p>
+            </div>
+
+            <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <br>
+              <div class="btn-group">
+                <button id="myBtn" onmouseover="miPrimeraFuncion()" class="btn btn-warning">Intentalo</button>
+                <button id="myBtn2" onclick="miSegundaFuncion()" class="btn btn-info">Intentalo</button>
+                <button id="myBtn3" onmouseout="miTerceraFuncion()" class="btn btn-success">Intentalo</button>
+              </div>
+              <p id="demo"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+    </section>
+
+  </main>
+
+
+
+</body>
+
+</html>
