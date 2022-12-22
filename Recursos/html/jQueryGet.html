@@ -27,6 +27,7 @@
   <!-- CUSTOM CSS -->
   <link rel="stylesheet" href="../css/stylesHomePage.css">
   <link rel="stylesheet" href="../css/styleEjemplos.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="../js/funcionesEjemplos.js"></script>
   <title>GRUPO04</title>
 </head>
@@ -50,139 +51,131 @@
       </header>
     </div><br><br>
 
-    <h1 class="text-center">HTML Documentos</h1>
+    <h1 class="text-center">jQuery Get</h1>
     <section id="header">
       <div class="container mt-5">
         <div class="row d-flex justify-content-center">
           <div class=" col-md-6 col-sm-6">
 
-            <p>Todos los documentos HTML deben comenzar con una declaración de tipo de documento: !DOCTYPE html.</p>
-            <p>El documento HTML en sí comienza con html y termina con /html.</p>
-            <p>La parte visible del documento HTML está entre body> y /body>.</p>
+            <h3>Manipulación de DOM de jQuery</h3>
+            <p>Una parte muy importante de jQuery es la posibilidad de manipular el DOM.</p>
+            <p>jQuery viene con un montón de métodos relacionados con DOM que facilitan el acceso y la manipulación de
+              elementos y atributos.</p>
             <br>
-            <h3>Ejemplo</h3>
+            <h3><b>DOM = Modelo de Objetos de Documento</b></h3>
             <br>
-            <!DOCTYPE html>
-            <img src="../img/htmlbasico.PNG" class="img-fluid">
-            <br>
-            <br>
-            <html>
 
-            <body>
-              <h3>Salida</h3>
-              <h1>My primer encbezado</h1>
-              <p>My primer parráfo.</p>
-              <p>Mi segundo parráfo.</p>
+            <p>El DOM define un estándar para acceder a documentos HTML y XML:</p>
+            <p>"El Modelo de Objetos de Documento (DOM) del W3C es una plataforma e interfaz de lenguaje neutral que
+              permite que los programas y scripts accedan y actualicen dinámicamente el contenido, la estructura y
+              estilo de un documento".</p>
 
-            </body>
+            <br>
+            <h3>Obtener contenido: texto (), html () y val ()</h3>
+            <br>
+            <p>Tres métodos jQuery simples, pero útiles, para la manipulación de DOM son:</p>
+            <li><font color="red">text() </font>- Establece o devuelve el contenido de texto de los elementos seleccionados</li>
+            <li><font color="red">html()</font>- Establece o devuelve el contenido de los elementos seleccionados (incluido el marcado HTML)</li>
+            <li><font color="red">val()</font>- Establece o devuelve el valor de los campos de formulario</li>
+            <br>
+            <br>
 
-            </html>
           </div>
         </div>
       </div>
+    </section>
+
+    <section id="testimonio">
+      <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <br><br><br><br>
+         <h4><b>El siguiente ejemplo demuestra cómo obtener el valor de un campo de entrada con el val() método jQuery:</b></h4>
+         <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <p><b>Código</b></p>
+            <pre>
+              <code>
+                function agregarJQueryGet1()
+                {
+                  $(document).ready(function(){
+                    $("#btn1").click(function(){
+                      alert("Text: " + $("#test").text());
+                    });
+                  });
+                }
+                
+                function agregarJQueryGet2()
+                {
+                  $(document).ready(function(){
+                    $("#btn2").click(function(){
+                      alert("HTML: " + $("#test").html());
+                    });
+                  });
+                }
+              </code> 
+              </pre>
+          </div>
+        </div>
+
+
+        <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <p><b>Vamos intentalo tú mismo</b></p>
+          <p id="test">Este es un texto en <i>Cursiva</i> en un párrafo</p>
+          <div class="btn-group">
+            <button id="btn1" class="btn btn-success" onmousedown="agregarJQueryGet1();">Mostrar texto</button>
+            <button id="btn2" class="btn btn-warning" onmousedown="agregarJQueryGet2();">Mostrar HTML</button>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <section id="header">
+      <div class="container mt-5">
+        <div class="row d-flex justify-content-center">
+          <div class=" col-md-6 col-sm-6">
+            
+            <h3><b>El siguiente ejemplo demuestra cómo obtener el valor de un campo de entrada con el val() método jQuery:</b></h3>
+
+          </div>
+        </div>
+      </div>
+      <br>
     </section>
 
 
     <section id="testimonio">
       <div class="container">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <h4><b>Declaración del !DOCTYPE</b></h4>
-        </div>
-
-
-        <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <li>La declaración
-            !DOCTYPE representa el tipo de documento y ayuda a los navegadores a mostrar correctamente las páginas
-            web.
-          </li>
-          <li>Solo debe aparecer una vez, en la parte superior de la página (antes de cualquier etiqueta HTML).
-          </li>
-          <li>La declaración !DOCTYPE no distingue entre mayúsculas y minúsculas.</li>
-          <li>La declaración !DOCTYPE para HTML5 es:</li>
-          
-        </div>
-
-           <img src="../img/doctypedeclaracion.PNG" class="img-fluid">
-
-
-    </section>
-
-    <!--<section id="testimonio">
-      <div class="container">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <h4><b>Ejemplo de la Animacion completa</b></h4>
-        </div>
-        </p>
-
-
-        <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <br><br><br><br>
+         <h4><b>El siguiente ejemplo demuestra cómo obtener el valor de un campo de entrada con el val() método jQuery:</b></h4>
+         <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
           <p><b>Código</b></p>
-          <pre>
-            <code>
-                function myMove() {
-                  let id = null;
-                  const elem = document.getElementById("animate");
-                  let pos = 0;
-                  clearInterval(id);
-                  id = setInterval(frame, 5);
-                  function frame() {
-                  if (pos == 350) {
-                  clearInterval(id);
-                  } else {
-                  pos++; 
-                  elem.style.top = pos + "px";
-                  elem.style.right = pos + "px"; 
-                    }
-                  }
-                } 
-            </code> 
-        </pre>
-
-        </div>
-
-        <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <div id="container">
-            <div id="animate"></div>
-          </div>
-          <br>
-          <center><button type="submit" onclick="myMove()" class="btn btn-info">Intentalo ahora</button></center>
-          <p id="texto"></p>
-        </div>
-
-    </section>-->
-
-    <section id="header">
-      <div class="container mt-5">
-        <div class="row d-flex justify-content-center">
-          <div class=" col-md-6 col-sm-6">
-
-            <p>Todos los documentos HTML deben comenzar con una declaración de tipo de documento: !DOCTYPE html.</p>
-            <p>El documento HTML en sí comienza con html y termina con /html.</p>
-            <p>La parte visible del documento HTML está entre body> y /body>.</p>
-            <br>
-            <h3>Ejemplo</h3>
-            <br>
-            <!DOCTYPE html>
-            <img src="../img/htmlbasico.PNG" class="img-fluid">
-            <br>
-            <br>
-            <html>
-
-            <body>
-              <h3>Salida</h3>
-              <h1>My primer encbezado</h1>
-              <p>My primer parráfo.</p>
-              <p>Mi segundo parráfo.</p>
-
-            </body>
-
-            </html>
+            <pre>
+              <code>
+                function agregarJQueryGetMetodoVal()
+                {
+                  $(document).ready(function(){
+                    $("button").click(function(){
+                      alert("Valor: " + $("#texto").val());
+                    });
+                  });
+                }
+              </code> 
+              </pre>
           </div>
         </div>
+
+         <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <p><b>Vamos intentalo tú mismo</b></p>
+          <p>Nombre: <input type="text" id="texto" placeholder="Ingrese un texto" width="400px"></p>
+          <button class="btn btn-primary" onmousedown="agregarJQueryGetMetodoVal()">Mostrar valor</button>
+        </div>
+        </div>
+
+       
+
       </div>
     </section>
-
-
 
   </main>
 

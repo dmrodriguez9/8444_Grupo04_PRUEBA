@@ -27,6 +27,7 @@
   <!-- CUSTOM CSS -->
   <link rel="stylesheet" href="../css/stylesHomePage.css">
   <link rel="stylesheet" href="../css/styleEjemplos.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="../js/funcionesEjemplos.js"></script>
   <title>GRUPO04</title>
 </head>
@@ -50,223 +51,148 @@
       </header>
     </div><br><br>
 
-
-
-
-    <h1 class="text-center">Eventos DOM</h1>
-
-
-    <!--Intoducción-->
+    <h1 class="text-center">jQuery Set</h1>
     <section id="header">
       <div class="container mt-5">
         <div class="row d-flex justify-content-center">
           <div class=" col-md-6 col-sm-6">
-            <p>
-              Para ejecutar código cuando un usuario hace clic en un elemento, agregue código
-              JavaScript a un atributo de evento HTML:</p><br>
 
-            <p class="text-center"><b>onclick=JavaScript</b></p> <br><br>
-
-            <h3>Ejemplos de Eventos HTML</h3>
+            <h3>Establecer contenido: texto (), html () y val ()</h3>
             <br>
-            <li>Cuando un usuario hace clic con el mouse.</li>
-            <li>Cuando una página web ha cargado.</li>
-            <li>Cuando se ha cargado una imagen.</li>
-            <li>Cuando el mouse se mueve sobre un elemento.</li>
-            <li>Cuando se cambia un campo de entrada.</li>
-            <li>Cuando se envía un formulario HTML.</li>
-            <li>Cuando un usuario pulsa una tecla.</li>
-
+            <p>Usaremos los mismos tres métodos de jQuery Get para configurar el contenido :</p>
+            <li>
+              <font color="red">text() </font>- Establece o devuelve el contenido de texto de los elementos
+              seleccionados
+            </li>
+            <li>
+              <font color="red">html()</font>- Establece o devuelve el contenido de los elementos seleccionados
+              (incluido el marcado HTML)
+            </li>
+            <li>
+              <font color="red">val()</font>- Establece o devuelve el valor de los campos de formulario
+            </li>
             <br>
             <br>
-
-            <!--Tabla -->
-            <h3 class="centrarh1">Tipos de eventos</h3>
-            <br>
-            <div class="table-responsive ">
-              <table class="table table-bordered text-center">
-                <thead>
-                  <tr class="table-light">
-                    <th>#</th>
-                    <th>Evento</th>
-                    <th>Descripción</th>
-                    <th>Elementos afectados</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="table-info">
-                    <td>1</td>
-                    <td>onblur</td>
-                    <td>Un elemento pierde el foco</td>
-                    <td>button, input, label, select, textarea, body</td>
-                  </tr>
-                  <tr class="table-success">
-                    <td>2</td>
-                    <td>onchange</td>
-                    <td>Un elemennto ha sido modificado</td>
-                    <td>input, select, textarea</td>
-
-                  </tr>
-                  <tr class="table-warning">
-                    <td>3</td>
-                    <td>onclick</td>
-                    <td>Pulsar y soltar el ratón</td>
-                    <td>Todos los elementos</td>
-
-                  </tr>
-                  <tr class="table-danger">
-                    <td>4</td>
-                    <td>ondbclick</td>
-                    <td>Pulsar dos veces seguidas el ratón</td>
-                    <td>Todos los elementos</td>
-
-                  </tr>
-                  <tr class="table-info">
-                    <td>5</td>
-                    <td>onkeydown</td>
-                    <td>Pulsar una tecla y no soltarla</td>
-                    <td>Elementos de formulario y body</td>
-                  </tr>
-
-                  </tr>
-                  <tr class="table-success">
-                    <td>6</td>
-                    <td>onkeypress</td>
-                    <td>Pulsar una tecla</td>
-                    <td>Elementos de formulario y body</td>
-                  </tr>
-
-                  </tr>
-                  <tr class="table-danger">
-                    <td>7</td>
-                    <td>onkeyup</td>
-                    <td>Soltar una tecla pulsada</td>
-                    <td>Elementos de formulario y body</td>
-                  </tr>
-
-                  </tr>
-                  <tr class="table-secondary">
-                    <td>8</td>
-                    <td>onload</td>
-                    <td>Página cargada completamente</td>
-                    <td>body</td>
-                  </tr>
-
-                  <tr class="table-warning">
-                    <td>9</td>
-                    <td>onmousedown</td>
-                    <td>Pulsar un botón del ratón y no soltarlo</td>
-                    <td>Todos los elementos</td>
-                  </tr>
-
-                  <tr class="table-success">
-                    <td>10</td>
-                    <td>onmousemove</td>
-                    <td>Mover el ratón</td>
-                    <td>Todos los elementos</td>
-                  </tr>
-
-                  <tr class="table-danger">
-                    <td>11</td>
-                    <td>onmouseout</td>
-                    <td>El ratón sale del elemennto</td>
-                    <td>Todos los elementos</td>
-                  </tr>
-
-                  <tr class="table-warning">
-                    <td>12</td>
-                    <td>onmouseover</td>
-                    <td>El ratón en el elemennto</td>
-                    <td>Todos los elementos</td>
-                  </tr>
-
-                  <tr class="table-primary">
-                    <td>13</td>
-                    <td>onmouseup</td>
-                    <td>Soltar el botón del ratón</td>
-                    <td>Todos los elementos</td>
-                  </tr>
-
-                  <tr class="table-warning">
-                    <td>14</td>
-                    <td>onreset</td>
-                    <td>Inicializar el formulario</td>
-                    <td>form</td>
-                  </tr>
-
-                </tbody>
-              </table>
-            </div>
-
           </div>
         </div>
       </div>
-      <br><br><br>
     </section>
-
-    <!--Primer ejemplo-->
 
     <section id="testimonio">
       <div class="container">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <h4>Ejemplo de onmouseover y onmouseout</h4>
-        </div>
-        </p>
+          <br><br><br>
+          <h4><b>El siguiente ejemplo demuestra cómo establecer contenido con los métodos jQuery text(), html() y val()</b></h4>
+          <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+           <p><b>Código</b></p>
+             <pre>
+               <code>
+                function agregarJQuerySet()
+                {
+                 $(document).ready(function(){
+                   $("#btn1").click(function(){
+                     $("#test1").text("Hola Mundo!");
+                   });
+                   $("#btn2").click(function(){
+                     $("#test2").html("<b>Aplicaciones de Tecnolgías Web!</b>");
+                   });
+                   $("#btn3").click(function(){
+                     $("#test3").val("Nathaly Maribel");
+                   });
+                 });
+                }
+               </code> 
+               </pre>
+           </div>
+         </div>
+      </div>
+          
 
-
-        <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <br>
-          <p><b>Código</b></p>
-          <p> function mOver(obj) {</p>
-          <p> obj.innerHTML = "Gracias"}</p>
-          <p> function mOut(obj) {</p>
-          <p> obj.innerHTML = "Pon el Raton sobre mi"}</p>
-        </div>
         <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <br>
-          <div onmouseover="mOver(this)" onmouseout="mOut(this)" id="eventos">
-            Pon el Raton sobre mi</div>
-          <br>
+            <p><b>Vamos intentalo tú mismo</b></p>
+            <p id="test1">Este es un párrafo</p>
+            <p id="test2">Este es otro párrafo</p>
+            <p>Input field: <input type="text" id="test3" value="Mickey Mouse"></p>
+            <div class="btn-group">
+              <button id="btn1" onmousedown="agregarJQuerySet()" class="btn btn-danger">Modificar Texto</button>
+              <button id="btn2" onmousedown="agregarJQuerySet()" class="btn btn-secondary">Modificar HTML</button>
+              <button id="btn3" onmousedown="agregarJQuerySet()" class="btn btn-dark">Modificar Valor</button>
+            </div>
+            <br><br><br><br>
         </div>
+        
 
+
+      </div>
     </section>
-    <br>
-    
-    <!--Segundo ejemplo-->
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-      <h3 class="text-center">Ejemplos de Eventos onmousedown, onmouseup y onclick.</h3>
-    </div>
+
     <section id="header">
       <div class="container mt-5">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
           <div class=" col-md-6 col-sm-6">
+            <h3>Una función de devolución de llamada para text(), html() y val()</h3>
+            <br>
+            <p>Los tres métodos jQuery anteriores: text(), html() y val(), también vienen con una función de devolución
+              de llamada. La función de devolución de llamada tiene dos parámetros: el índice del elemento actual en la
+              lista de elementos seleccionados y el valor original (antiguo). Luego devuelve la cadena que desea usar
+              como el nuevo valor de la función.</p>
 
-            <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-
-              <p><b>Código</b></p>
-
-              <p> function mDown(obj) {</p>
-              <p> obj.style.backgroundColor = "#1ec5e5";</p>
-              <p> obj.innerHTML = "Liberame!";}</p>
-
-              <p> function mUp(obj) {</p>
-              <p> obj.style.backgroundColor="#D94A38";</p>
-              <p> obj.innerHTML="Gracias";}</p>
-            </div>
-
-            <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
               <br>
-              <div onmousedown="mDown(this)" onmouseup="mUp(this)" id="eventos">
-                Haz click en mi</div>
-            </div>
           </div>
         </div>
-
       </div>
-      </div>
-      <br>
-      <br>
+     
     </section>
+
+
+    <section id="testimonio">
+      
+      <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <br><br><br>
+          <h4><b>El siguiente ejemplo demuestra cómo obtener el valor de un campo de entrada con el val() método jQuery:</b></h4>
+          <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+           <p><b>Código</b></p>
+           <pre>
+            <code>
+              function agregarJQuerySetFDevolucion()
+              {
+                $(document).ready(function(){
+                  $("#btn4").click(function(){
+                    $("#parrafo1").text(function(i, origText){
+                      return "Viejo texto: " + origText + " Nuevo texto: Hola mundo! (index: " + i + ")"; 
+                    });
+                  });
+                
+                  $("#btn5").click(function(){
+                    $("#parrafo2").html(function(i, origText){
+                      return "Viejo html: " + origText + " Nuevo html: Hola <b>mundo!</b> (index: " + i + ")"; 
+                    });
+                  });
+                });
+              }
+            </code> 
+            </pre>
+           </div>
+         </div>
+      </div>
+        
+       
+          <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <p><b>Vamos intentalo tú mismo</b></p>
+            <p id="parrafo1">Este es un párrafo en <i>Cursiva</i></p>
+            <p id="parrafo2">Este es otro párrafo en <i>Cursiva</i></p>
+            <div class="btn-group">
+              <button id="btn4" onmousedown="agregarJQuerySetFDevolucion()" class="btn btn-secondary">Mostrar viejo/Nuevo texto</button>
+              <button id="btn5" onmousedown="agregarJQuerySetFDevolucion()" class="btn btn-success">Mostrar viejo/Nuevo HTML</button>
+            </div>
+        
+        </div>
+        
+    </section>
+
+
+
 
   </main>
 </body>

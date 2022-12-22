@@ -1,15 +1,15 @@
 #menu {
     float:left;
-    height:250px;
-    padding:10px 10px;
-    width:400px;
+    height:470px;
+    padding:10px 1px;
+    width:350px;
   }
 
 #contenido {
     float:left;
-    height:100px;
-    padding:60px 15px;
-    width:280px;
+    height:300px;
+    padding:60px 30px;
+    width:400px;
   }
 
   
@@ -49,7 +49,7 @@
   #testimonio {
     background: rgb(20, 165, 129);
     padding: 40px ;   /*Controlamos el espacio arriba y abajo*/
-    height: 600px;
+    height: 1000px;
   }
 
   .centrarh1

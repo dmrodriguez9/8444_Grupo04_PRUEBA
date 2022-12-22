@@ -27,6 +27,7 @@
   <!-- CUSTOM CSS -->
   <link rel="stylesheet" href="../css/stylesHomePage.css">
   <link rel="stylesheet" href="../css/styleEjemplos.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="../js/funcionesEjemplos.js"></script>
   <title>GRUPO04</title>
 </head>
@@ -50,116 +51,149 @@
       </header>
     </div><br><br>
 
-    <br>
-    <center>
-      <h1>Event Listener DOM</h1>
-    </center>
-
-    <!--Intoducción-->
+    <h1 class="text-center">jQuery Add</h1>
     <section id="header">
       <div class="container mt-5">
         <div class="row d-flex justify-content-center">
           <div class=" col-md-6 col-sm-6">
-            <h3 class="text-center">
-              El método addEventListener()</h3><br>
 
-            <p>Es un escuchador que indica al navegador que este atento a la interacción del usuario.
-              La ventaja es que se escribe totalmente en el JS, sin necesidad de tocar el HTML.</p>
-
+            <h3>Agregar nuevo contenido HTML</h3>
             <br>
-            <li>El método addEventListener() adjunta un controlador de eventos al elemento especificado.</li>
-            <li>El método addEventListener() adjunta un controlador de eventos a un elemento sin sobrescribir los
-              controladores de eventos existentes.</li>
-            <li>Puede agregar muchos controladores de eventos del mismo tipo a un elemento, es decir, dos eventos de
-              "clic".</li>
-            <li>Puede agregar detectores de eventos a cualquier objeto DOM, no solo elementos HTML. es decir, el objeto
-              de la ventana.</li>
-            <li>El método addEventListener() facilita el control de cómo reacciona el evento al burbujeo.</li>
-            <li>Cuando se usa el método addEventListener(), el JavaScript se separa del marcado HTML, para una mejor
-              legibilidad y le permite agregar detectores de eventos incluso cuando no controla el marcado HTML.</li>
-            <li>Puede eliminar fácilmente un detector de eventos mediante el método removeEventListener().</li>
-
-            <br>
-            <br>
-
-            <h3 class="text-center">Sintaxis</h3>
-
-            <p class="text-center"><b>element.addEventListener(event, function, useCapture);</b></p>
-
-            <li>El primer parámetro es el tipo de evento (como "clic" o "mousedown" o cualquier otro evento HTML DOM).
+            <p>Veremos cuatro métodos jQuery que se utilizan para agregar contenido nuevo:</p>
+            <li>
+              <font color="red">append() </font>- Inserta contenido al final de los elementos seleccionados
             </li>
-            <li>El segundo parámetro es la función que queremos llamar cuando ocurra el evento.</li>
-            <li>El tercer parámetro es un valor booleano que especifica si se debe usar el burbujeo de eventos o la
-              captura de eventos. Este parámetro es opcional.</li>
-
+            <li>
+              <font color="red">prepend()</font>- Inserta contenido al principio de los elementos seleccionados
+            </li>
+            <li>
+              <font color="red">after()</font>- Inserta contenido después de los elementos seleccionados
+            </li>
+            <li>
+              <font color="red">before()</font>- Inserta contenido antes de los elementos seleccionados
+            </li>
+            <br>
+            <br>
           </div>
-
         </div>
       </div>
-      </div>
-      <br><br><br>
     </section>
-
-    <!--Primer ejemplo-->
 
     <section id="testimonio">
       <div class="container">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <h4>Agregar un controlador de eventos a un elemento</h4>
-        </div>
-        </p>
+          <br><br><br>
+          <h4><b>Ejemplo método jQuery append()</b></h4>
+          <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+           <p><b>Código</b></p>
+             <pre>
+               <code>
+                function agregarJQueryAddFinal()
+                {
+                  $(document).ready(function(){
+                    $("#btn1").click(function(){
+                      $("p").append(" <b>Texto adjuntado al final</b>.");
+                    });
+                  
+                    $("#btn2").click(function(){
+                      $("ul").append("<li>Elemento adjuntado al final</li>");
+                    });
+                  });
+                }
+               </code> 
+               </pre>
+           </div>
+         </div>
+      </div>
+          
 
-
-        <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <p><b>Código</b></p>
-          <p>document.getElementById("myBtn").addEventListener("click", function() {</p>
-          <p>document.getElementById("myBtn").innerHTML="Aplicaciones de Tecnologías Web";</p>
-          <p>});</p>
-        </div>
         <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <br>
-          <br>
-          <button id="myBtn" onclick="añadirEventosListener()" class="btn btn-success">Intentalo</button>
-          <br>
+            <p><b>Vamos intentalo tú mismo</b></p>
+            <p>Este es un párrafo.</p>
+            <p>Este es otro párrafo.</p>
+
+            <ol>
+              <li>Lista item 1</li>
+              <li>Lista item 2</li>
+              <li>Lista item 3</li>
+            </ol>
+
+            <div class="btn-group">
+              <button id="btn1" class="btn btn-danger" onmousedown="agregarJQueryAddFinal()">Agreagr texto</button>
+              <button id="btn2" class="btn btn-warning" onmousedown="agregarJQueryAddFinal()">Agregar elementos a la lista</button>
+            </div>
+            <br><br><br><br>
         </div>
+        
 
+
+      </div>
     </section>
-    <br>
 
-    <!--Segundo ejemplo-->
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-      <h3 class="text-center">Agregue muchos controladores de eventos al mismo elemento</h3>
-    </div>
     <section id="header">
       <div class="container mt-5">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
           <div class=" col-md-6 col-sm-6">
-
-            <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-
-              <p><b>Código</b></p>
-
-              <p>var x = document.getElementById("myBtn");</p>
-                <p>x.addEventListener("mouseover", myFunction);</p>
-                <p> x.addEventListener("click", mySecondFunction);</p>
-                  <p>x.addEventListener("mouseout", myThirdFunction);</p>
-            </div>
-
-            <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <h3>Método jQuery prepend()</h3>
+            <br>
+            <p>El método jQuery prepend()inserta contenido AL PRINCIPIO de los elementos HTML seleccionados.</p>
               <br>
-              <div class="btn-group">
-                <button id="myBtn" onmouseover="miPrimeraFuncion()" class="btn btn-warning">Intentalo</button>
-                <button id="myBtn2" onclick="miSegundaFuncion()" class="btn btn-info">Intentalo</button>
-                <button id="myBtn3" onmouseout="miTerceraFuncion()" class="btn btn-success">Intentalo</button>
-              </div>
-              <p id="demo"></p>
-            </div>
           </div>
         </div>
       </div>
-      <br>
-      <br>
+     
     </section>
+
+
+    <section id="testimonio">
+      
+      <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <br><br><br>
+          <h4><b>Ejemplo método jQuery prepend()</b></h4>
+          <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+           <p><b>Código</b></p>
+           <pre>
+            <code>
+              function agregarJQueryAddPrincipio()
+              {
+                $(document).ready(function(){
+                  $("#btn3").click(function(){
+                    $("p").prepend("<b>Se agrego el texto al principio</b>. ");
+                  });
+                  $("#btn4").click(function(){
+                    $("ul").prepend("<li>Se agrego un elemento al principio</li>");
+                  });
+                });
+              }
+            </code> 
+            </pre>
+           </div>
+         </div>
+      </div>
+        
+       
+          <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <p><b>Vamos intentalo tú mismo</b></p>
+            <p>Este es un párrafo.</p>
+            <p>Este es otro párrafo.</p>
+
+            <ul>
+              <li>Elemento 1</li>
+              <li>Elemento 2</li>
+              <li>Elemento 3</li>
+            </ul>
+
+            <div class="btn-group">
+              <button id="btn3" class="btn btn-danger" onmousedown="agregarJQueryAddPrincipio()">Agregar texto al principio</button>
+              <button id="btn4" class="btn btn-dark" onmousedown="agregarJQueryAddPrincipio()">Agregar elemento al principio de la lista</button>
+            </div>
+        
+        </div>
+        
+    </section>
+
+    
 
   </main>
 
