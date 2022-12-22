@@ -85,8 +85,8 @@
           <br><br><br>
           <h4><b>Ejemplo método jQuery append()</b></h4>
           <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-           <p><b>Código</b></p>
-             <pre>
+            <p><b>Código</b></p>
+            <pre>
                <code>
                 function agregarJQueryAddFinal()
                 {
@@ -102,29 +102,30 @@
                 }
                </code> 
                </pre>
-           </div>
-         </div>
-      </div>
-          
-
-        <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <p><b>Vamos intentalo tú mismo</b></p>
-            <p>Este es un párrafo.</p>
-            <p>Este es otro párrafo.</p>
-
-            <ol>
-              <li>Lista item 1</li>
-              <li>Lista item 2</li>
-              <li>Lista item 3</li>
-            </ol>
-
-            <div class="btn-group">
-              <button id="btn1" class="btn btn-danger" onmousedown="agregarJQueryAddFinal()">Agreagr texto</button>
-              <button id="btn2" class="btn btn-warning" onmousedown="agregarJQueryAddFinal()">Agregar elementos a la lista</button>
-            </div>
-            <br><br><br><br>
+          </div>
         </div>
-        
+      </div>
+
+
+      <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <p><b>Vamos intentalo tú mismo</b></p>
+        <p>Este es un párrafo.</p>
+        <p>Este es otro párrafo.</p>
+
+        <ol>
+          <li>Lista item 1</li>
+          <li>Lista item 2</li>
+          <li>Lista item 3</li>
+        </ol>
+
+        <div class="btn-group">
+          <button id="btn1" class="btn btn-danger" onmousedown="agregarJQueryAddFinal()">Agreagr texto</button>
+          <button id="btn2" class="btn btn-warning" onmousedown="agregarJQueryAddFinal()">Agregar elementos a la
+            lista</button>
+        </div>
+        <br><br><br><br>
+      </div>
+
 
 
       </div>
@@ -137,23 +138,23 @@
             <h3>Método jQuery prepend()</h3>
             <br>
             <p>El método jQuery prepend()inserta contenido AL PRINCIPIO de los elementos HTML seleccionados.</p>
-              <br>
+            <br>
           </div>
         </div>
       </div>
-     
+
     </section>
 
 
     <section id="testimonio">
-      
+
       <div class="container">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
           <br><br><br>
           <h4><b>Ejemplo método jQuery prepend()</b></h4>
           <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-           <p><b>Código</b></p>
-           <pre>
+            <p><b>Código</b></p>
+            <pre>
             <code>
               function agregarJQueryAddPrincipio()
               {
@@ -168,32 +169,88 @@
               }
             </code> 
             </pre>
-           </div>
-         </div>
-      </div>
-        
-       
-          <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <p><b>Vamos intentalo tú mismo</b></p>
-            <p>Este es un párrafo.</p>
-            <p>Este es otro párrafo.</p>
-
-            <ul>
-              <li>Elemento 1</li>
-              <li>Elemento 2</li>
-              <li>Elemento 3</li>
-            </ul>
-
-            <div class="btn-group">
-              <button id="btn3" class="btn btn-danger" onmousedown="agregarJQueryAddPrincipio()">Agregar texto al principio</button>
-              <button id="btn4" class="btn btn-dark" onmousedown="agregarJQueryAddPrincipio()">Agregar elemento al principio de la lista</button>
-            </div>
-        
+          </div>
         </div>
-        
+      </div>
+
+
+      <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <p><b>Vamos intentalo tú mismo</b></p>
+        <p>Este es un párrafo.</p>
+        <p>Este es otro párrafo.</p>
+
+        <ul>
+          <li>Elemento 1</li>
+          <li>Elemento 2</li>
+          <li>Elemento 3</li>
+        </ul>
+
+        <div class="btn-group">
+          <button id="btn3" class="btn btn-danger" onmousedown="agregarJQueryAddPrincipio()">Agregar texto al
+            principio</button>
+          <button id="btn4" class="btn btn-dark" onmousedown="agregarJQueryAddPrincipio()">Agregar elemento al principio
+            de la lista</button>
+        </div>
+
+      </div>
+
     </section>
 
-    
+    <section id="header">
+      <div class="container mt-5">
+        <div class="row d-flex justify-content-center">
+          <div class=" col-md-6 col-sm-6">
+            <h3>Agregue varios elementos nuevos con append() y prepend()</h3>
+            <br>
+            <p>En los dos ejemplos anteriores, solo hemos insertado algo de texto/HTML al principio/final de los
+              elementos HTML seleccionados.</p>
+            <p>Sin embargo, tanto los métodos append() como pueden tomar un número infinito de elementos nuevos como
+              parámetros. prepend() Los nuevos elementos se pueden generar con texto/HTML (como hemos hecho en los
+              ejemplos anteriores), con jQuery o con código JavaScript y elementos DOM</p>
+            <p>En el siguiente ejemplo, creamos varios elementos nuevos. Los elementos se crean con texto/HTML, jQuery y
+              JavaScript/DOM. Luego agregamos los nuevos elementos al texto con el append() método (esto también habría
+              funcionado prepend()):</p>
+            <br>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <section id="testimonio">
+
+      <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <br><br><br>
+          <h4><b>Ejemplo con el método append() agregando varios elementos</b></h4>
+          <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <p><b>Código</b></p>
+            <pre>
+            <code>
+              function appendText() {
+                var title1 = "<h1>Texto.</h1>";        // Create text with HTML
+                var title2 = $("<h1></h1>").text("Texto.");  // Create text with jQuery
+                var title3 = document.createElement("h1");
+                title3.innerHTML = "Texto.";         // Create text with DOM
+                $("body").append(title1, title2, title3);   // Append new elements
+              }
+            </code> 
+            </pre>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <p><b>Vamos intentalo tú mismo</b></p>
+        <p>Este es un párrafo.</p>
+        <button onclick="appendText()" class="btn btn-dark">Agregar texto</button>
+      </div>
+
+    </section>
+
+
 
   </main>
 

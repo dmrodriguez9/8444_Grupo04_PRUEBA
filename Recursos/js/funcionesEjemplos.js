@@ -193,3 +193,82 @@ function agregarJQueryGetMetodoVal()
       });
     });
   }
+
+  function appendText() {
+    var title1 = "<h1>Texto.</h1>";        // Create text with HTML
+    var title2 = $("<h1></h1>").text("Texto.");  // Create text with jQuery
+    var title3 = document.createElement("h1");
+    title3.innerHTML = "Texto.";         // Create text with DOM
+    $("body").append(title1, title2, title3);   // Append new elements
+  }
+
+  /*jQuery Remove*/
+
+  function agregarJQueryRemove()
+  {
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("#div1").remove();
+      });
+    });
+  }
+
+  function agregarJQueryEmpty()
+  {
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("#div2").empty();
+      });
+    });
+  }
+
+  function filtrarJQueryEmptyRemove()
+  {
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("p").remove(".test");
+      });
+    });
+  }
+
+  /*jQuery Dimensions*/
+
+  function agregarJQueryWidthHeight()
+  {
+    $(document).ready(function(){
+      $("button").click(function(){
+        var txt = "";
+        txt += "Width of div: " + $("#div1").width() + "</br>";
+        txt += "Height of div: " + $("#div1").height();
+        $("#div1").html(txt);
+      });
+    });
+  }
+
+  function agregarJQueryInnerWidthInnerHeight()
+  {
+    $(document).ready(function(){
+      $("button").click(function(){
+        var txt = "";
+        txt += "Width of div: " + $("#div2").width() + "</br>";
+        txt += "Height of div: " + $("#div2").height() + "</br>";
+        txt += "Inner width of div: " + $("#div2").innerWidth() + "</br>";
+        txt += "Inner height of div: " + $("#div2").innerHeight();
+        $("#div2").html(txt);
+      });
+    });
+  }
+
+function agregarJQueryOuterWidthOuterHeight()
+{
+  $(document).ready(function(){
+    $("button").click(function(){
+      var txt = "";
+      txt += "Width of div: " + $("#div3").width() + "</br>";
+      txt += "Height of div: " + $("#div3").height() + "</br>";
+      txt += "Outer width of div: " + $("#div3").outerWidth() + "</br>";
+      txt += "Outer height of div: " + $("#div3").outerHeight();
+      $("#div3").html(txt);
+    });
+  });
+}

@@ -26,6 +26,8 @@
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   <!-- CUSTOM CSS -->
   <link rel="stylesheet" href="../css/stylesHomePage.css">
+  <link rel="stylesheet" href="../css/styleEjemplos.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="../js/funcionesEjemplos.js"></script>
   <title>GRUPO04</title>
 </head>
@@ -50,21 +52,21 @@
       </header>
     </div><br><br>
 
-    <h1 class="text-center">Navegación DOM</h1>
+    <h1 class="text-center">jQuery Dimensions</h1>
     <section id="header">
       <div class="container mt-5">
         <div class="row d-flex justify-content-center">
           <div class=" col-md-6 col-sm-6">
 
-            <h3>Navegación entre nodos</h3>
+            <h3>Eliminar elementos/contenido</h3>
             <br>
-            <p>parentNode</p>
-            <p>childNodes[nodenumber]</p>
-            <p>firstChild</p>
-            <p>lastChild</p>
-            <p>nextSibling</p>
-            <p>previousSibling</p>
-
+            <li>
+              El <font color="red">width()  </font>método establece o devuelve el ancho de un elemento (excluye relleno, borde y margen).
+            </li>
+            <li>
+              El <font color="red">height() </font>método establece o devuelve la altura de un elemento (excluye relleno, borde y margen).
+            </li>
+            <br>
             <br>
           </div>
         </div>
@@ -74,58 +76,213 @@
     <section id="testimonio">
       <div class="container">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <h4>Ejemplo de navegación entre nodos con <b>childNodes</b></h4>
+          <br><br><br>
+          <h4><b>El siguiente ejemplo devuelve el ancho y alto de un <div> elemento especificado:</b></h4>
+          <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <p><b>Código</b></p>
+            <pre>
+               <code>
+                function agregarJQueryWidthHeight()
+                {
+                  $(document).ready(function(){
+                    $("button").click(function(){
+                      var txt = "";
+                      txt += "Width of div: " + $("#div1").width() + "</br>";
+                      txt += "Height of div: " + $("#div1").height();
+                      $("#div1").html(txt);
+                    });
+                  });
+                }
+               </code> 
+               </pre>
+          </div>
         </div>
-        </p>
+      </div>
 
 
-        <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <p><b>Vamos intentalo tú mismo</b></p>
+        <style>
+          #div1 {
+            height: 90px;
+            width: 300px;
+            padding: 10px;
+            margin: 3px;
+            border: 1px solid cyan;
+            background-color: rgb(93, 228, 176);
+          }
+          </style>
+          </head>
+          <body>
+          
+          <div id="div1"></div>
           <br>
-          <p><b>Código</b></p>
-          <p> function nav() {</p>
-          <p>document.getElementById("id02").innerHTML = document.getElementById("id01").childNodes[0].nodeValue;}</p>
-        </div>
+          
+          <button class="btn btn-outline-dark" onmousedown="agregarJQueryWidthHeight()">Mostrar dimensiones del div</button>
+          <p>width() - devuelve el ancho de un elemento.</p>
+          <p>height() - devuelve la altura de un elemento.</p>
+          
+        <br><br><br><br>
+      </div>
 
-        <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <br>
-          <h1 id="id01">Aplicaciones de Tecnologías Web</h1>
-          <button type="submit" onclick="navegar()" class="btn btn-success">Intentalo ahora!</button>
-          <p id="id02"></p>
 
-          <br>
-        </div>
 
-    </section>
-    <br>
-
-    <section id="testimonio">
-      <div class="container">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <h3 class="text-center">Ejemplo de navegación entre nodos con <b>firstChild</b></h3>
-        </div>
-
-        <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-
-          <p><b>Código</b></p>
-
-          <pre>
-            <code>              
-              <p>Script</p>
-              document.getElementById("id04").innerHTML = document.getElementById("id03").firstChild.nodeValue;
-            </code> 
-        </pre>
-        </div>
-
-        <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <br>
-          <h1 id="id03">LEO MESSI</h1>
-          <button type="submit" onclick="nodo()" class="btn btn-success">Intentalo ahora</button><br><br>
-          <p id="id04"></p>
-          <br>
-        </div>
       </div>
     </section>
 
+    <section id="header">
+      <div class="container mt-5">
+        <div class="row d-flex justify-content-center">
+          <div class=" col-md-6 col-sm-6">
+            <h3>Métodos jQuery innerWidth() y innerHeight()</h3>
+            <br>
+            <br>
+            <li>
+              El <font color="red">innerWidth()  </font>método devuelve el ancho de un elemento (incluye relleno)..
+            </li>
+            <li>
+              El <font color="red">innerHeight() </font>método devuelve la altura de un elemento (incluye relleno)..
+            </li>
+            <br>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <section id="testimonio">
+
+      <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <br><br><br>
+          <h4><b>El siguiente ejemplo devuelve el ancho/alto interno de un <font color="red">div</font> elemento específico:</b></h4>
+          <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <p><b>Código</b></p>
+            <pre>
+            <code>
+              function agregarJQueryInnerWidthInnerHeight()
+              {
+                $(document).ready(function(){
+                  $("button").click(function(){
+                    var txt = "";
+                    txt += "Width of div: " + $("#div2").width() + "</br>";
+                    txt += "Height of div: " + $("#div2").height() + "</br>";
+                    txt += "Inner width of div: " + $("#div2").innerWidth() + "</br>";
+                    txt += "Inner height of div: " + $("#div2").innerHeight();
+                    $("#div1").html(txt);
+                  });
+                });
+              }
+            </code> 
+            </pre>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <p><b>Vamos intentalo tú mismo</b></p>
+        <style>
+          #div2 {
+            height: 100px;
+            width: 300px;
+            padding: 10px;
+            margin: 3px;
+            border: 1px solid blue;
+            background-color: lightblue;
+          }
+          </style>
+          <body>
+          
+          <div id="div2"></div>
+          <br>
+          
+          <button class="btn btn-outline-light" onmousedown="agregarJQueryInnerWidthInnerHeight()">Mostrar las dimensiones del div</button>
+          
+          <p>innerWidth() - devuelve el ancho de un elemento (incluye relleno).</p>
+          <p>innerHeight() - devuelve la altura de un elemento (incluye relleno).</p>
+
+      </div>
+
+    </section>
+
+    <section id="header">
+      <div class="container mt-5">
+        <div class="row d-flex justify-content-center">
+          <div class=" col-md-6 col-sm-6">
+            <h3>Métodos jQuery outerWidth() y outerHeight()</h3>
+            <br>
+            <li>
+              El <font color="red">outerWidth()  </font>método devuelve el ancho de un elemento (incluye relleno y borde).
+            </li>
+            <li>
+              El <font color="red">outerHeight() </font>método devuelve la altura de un elemento (incluye relleno y borde).
+            </li>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+
+    </section>
+
+
+    <section id="testimonio">
+
+      <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <br><br><br>
+          <h4><b>El siguiente ejemplo devuelve el ancho/alto externo de un <font color="red">div</font>  elemento específico:</b></h4>
+          <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <p><b>Código</b></p>
+            <pre>
+            <code>
+              function agregarJQueryOuterWidthOuterHeight()
+              {
+                $(document).ready(function(){
+                  $("button").click(function(){
+                    var txt = "";
+                    txt += "Width of div: " + $("#div3").width() + "</br>";
+                    txt += "Height of div: " + $("#div3").height() + "</br>";
+                    txt += "Outer width of div: " + $("#div3").outerWidth() + "</br>";
+                    txt += "Outer height of div: " + $("#div3").outerHeight();
+                    $("#div3").html(txt);
+                  });
+                });
+              }
+            </code> 
+            </pre>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <p><b>Vamos intentalo tú mismo</b></p>
+        <style>
+          #div3 {
+            height: 100px;
+            width: 300px;
+            padding: 10px;
+            margin: 3px;
+            border: 1px solid rgb(255, 153, 0);
+            background-color: rgb(219, 252, 36);
+          }
+          </style>
+          </head>
+          <body>
+          
+          <div id="div3"></div>
+          <br>
+          
+          <button class="btn btn-outline-warning" onmousedown="agregarJQueryOuterWidthOuterHeight()">Mostrar las dimensiones del div</button>
+          
+          <p>outerWidth() - devuelve el ancho de un elemento (incluye relleno y borde).</p>
+          <p>outerHeight() - devuelve la altura de un elemento (incluye relleno y borde).</p>
+      </div>
+
+    </section>
   </main>
 
 </body>

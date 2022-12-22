@@ -27,6 +27,7 @@
   <!-- CUSTOM CSS -->
   <link rel="stylesheet" href="../css/stylesHomePage.css">
   <link rel="stylesheet" href="../css/styleEjemplos.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="../js/funcionesEjemplos.js"></script>
   <title>GRUPO04</title>
 </head>
@@ -50,119 +51,188 @@
       </header>
     </div><br><br>
 
-    <h1 class="text-center">Nodos DOM</h1>
-
-
-    <!--Intoducción-->
+    <h1 class="text-center">jQuery Remove</h1>
     <section id="header">
       <div class="container mt-5">
         <div class="row d-flex justify-content-center">
           <div class=" col-md-6 col-sm-6">
 
-
-
-
-            <h3>Principales tipos de nodos en el DOM son:</h3>
+            <h3>Eliminar elementos/contenido</h3>
             <br>
-            <li><b> Document:</b> el nodo document es el nodo raíz, a partir del cual derivan el resto de nodos.</li>
-            <li><b>Element:</b> son los nodos definidos por etiquetas html. Por ejemplo una etiqueta div genera un nodo.
-              Si
-              dentro de ese div tenemos tres etiquetas p, dichas etiquetas definen nodos hijos de la etiqueta div.</li>
-            <li><b> Text:</b> el texto dentro de un nodo element se considera un nuevo nodo hijo de tipo text (texto).
-              Los
-              navegadores también crean nodos tipo texto sin contenido para representar elementos como saltos de línea o
-              espacios vacíos.</li>
-            <li><b>Attribute: </b>los atributos de las etiquetas definen nodos, aunque trabajando con JavaScript no los
-              veremos
-              como nodos, sino que lo consideramos información asociada al nodo de tipo element.</li>
-
-
+            <li>
+              <font color="red">remove()  </font>- Inserta contenido al final de los elementos seleccionados
+            </li>
+            <li>
+              <font color="red">empty() </font>- Inserta contenido al principio de los elementos seleccionados
+            </li>
             <br>
             <br>
-
           </div>
-
         </div>
       </div>
-      </div>
-      <br><br><br>
     </section>
-
-    <!--Primer ejemplo-->
 
     <section id="testimonio">
       <div class="container">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <h4>Ejemplo explicado </h4>
-        </div>
-        </p>
-
-
-        <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <br>
-          <p>Este código crea un nuevo elemento <font color="red">p </font> : </p>
-          <p>
-            <font color="blue">const</font> para = document.createElement("p");
-          </p>
-          <p>Para agregar texto al elemento p, primero debe crear un nodo de texto. Este código crea un nodo de texto:
-          </p>
-          <p>
-            <font color="blue">const node </font>= document.createTextNode("This is a new paragraph.");
-          </p>
-          <p> Luego debe agregar el nodo de texto al elemento <font color="red">p</font>:</p>
-          <p>para.appendChild(node);</p>
-          <p>Finalmente, debe agregar el nuevo elemento a un elemento existente.</p>
-          <p>Este código encuentra un elemento existente:</p>
-          <p>
-            <font color="blue">const</font> element = document.getElementById("div1");
-          </p>
-          <p>Este código agrega el nuevo elemento al elemento existente:</p>
-          <p>element.appendChild(para);</p>
-        </div>
-
-    </section>
-    <br>
-
-    <!--Segundo ejemplo-->
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-      <h3 class="text-center">Creación de nuevos elementos HTML - insertBefore()</h3>
-    </div>
-    <section id="header">
-      <div class="container mt-5">
-        <div class="row">
-          <div class=" col-md-6 col-sm-6">
-
-            <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-              <p><b>Código</b></p>
-              <p>div id="div1"</p>
-              <p>p id="p1">This is a paragraph. p</p>
-              <p>p id="p2">This is another paragraph. p</p>
-              <p> const para = document.createElement("p");</p>
-              <p></p>const node = document.createTextNode("This is new.");
-              <p>para.appendChild(node);</p>
-              <p>const element = document.getElementById("div1");</p>
-              <p>const child = document.getElementById("p1");</p>
-              <p>element.insertBefore(para,child);</p>
-            </div>
-
-            <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-              <br>
-              <div id="div1">
-                <p id="p1">Este es un parráfo</p>
-                <p id="p2">Este es otro parráfo </p>
-                <button class="btn btn-warning" onclick="añadirNodos()">Intentalo</button>
-              </div>
-             
-            </div>
+          <br><br><br>
+          <h4><b>Ejemplo del método jQuery remove()</b></h4>
+          <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <p><b>Código</b></p>
+            <pre>
+               <code>
+                function agregarJQueryRemove()
+                {
+                  $(document).ready(function(){
+                    $("button").click(function(){
+                      $("#div1").remove();
+                    });
+                  });
+                }
+               </code> 
+               </pre>
           </div>
         </div>
+      </div>
+
+
+      <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <p><b>Vamos intentalo tú mismo</b></p>
+        <div id="div1" style="height:160px;width:300px;border:1px solid black;background-color:yellow;">
+
+          Estos son algunos encabezados en el div
+          <h3>Este es un h3 en el div.</h3>
+          <h4>Este es un h4 en el div</h4>
+          
+          </div>
+          <br>
+          
+          <button class="btn btn-outline-warning" onmousedown="agregarJQueryRemove()">Elimine el elemento div</button>
+        <br><br><br><br>
+      </div>
+
+
 
       </div>
-      </div>
-      <br>
-      <br>
     </section>
 
+    <section id="header">
+      <div class="container mt-5">
+        <div class="row d-flex justify-content-center">
+          <div class=" col-md-6 col-sm-6">
+            <h3>Método jQuery vacío ()</h3>
+            <br>
+            <p>El método jQuery empty() elimina los elementos secundarios de los elementos seleccionados.</p>
+            <br>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <section id="testimonio">
+
+      <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <br><br><br>
+          <h4><b>Ejemplo del método jQuery empty()</b></h4>
+          <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <p><b>Código</b></p>
+            <pre>
+            <code>
+              function agregarJQueryEmpty()
+              {
+                $(document).ready(function(){
+                  $("button").click(function(){
+                    $("#div1").empty();
+                  });
+                });
+              }
+            </code> 
+            </pre>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <p><b>Vamos intentalo tú mismo</b></p>
+        <div id="div2" style="height:100px;width:300px;border:1px solid black;background-color:rgb(255, 136, 0);">
+
+          Estos son algunos encabezados en el div
+          <h5>Este es un h5 en el div.</h5>
+          <h6>Este es un h6 en el div</h6>
+          
+          </div>
+          <br>
+          
+          <button class="btn btn-outline-dark" onmousedown="agregarJQueryEmpty()">Vaciar el elemento div</button>
+
+      </div>
+
+    </section>
+
+    <section id="header">
+      <div class="container mt-5">
+        <div class="row d-flex justify-content-center">
+          <div class=" col-md-6 col-sm-6">
+            <h3>Filtrar los Elementos a Eliminar</h3>
+            <br>
+            <p>El método jQuery <font color="red"> remove() </font>también acepta un parámetro, que le permite filtrar los elementos que se eliminarán.</p>
+            <p>El parámetro puede ser cualquiera de las sintaxis del selector de jQuery.</p>
+            <br>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <section id="testimonio">
+
+      <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <br><br><br>
+          <h4><b>El siguiente ejemplo elimina todos los <font color="red">p</font> elementos con class="test":</b></h4>
+          <div id="menu" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <p><b>Código</b></p>
+            <pre>
+            <code>
+              function filtrarJQueryEmptyRemove()
+              {
+                $(document).ready(function(){
+                  $("button").click(function(){
+                    $("p").remove(".test");
+                  });
+                });
+              }
+            </code> 
+            </pre>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <p><b>Vamos intentalo tú mismo</b></p>
+        <style>
+          .test {
+            color: rgb(68, 0, 255);
+            font-size: 20px;
+          }
+          </style>
+          </head>
+          <body>
+          
+          <p>Este es un párrafo.</p>
+          <p class="test">Este es un segundo párrafo.</p>
+          <p class="test">Este es un tercer párrafo.</p>
+          
+          <button class="btn btn-outline-light" onmousedown="filtrarJQueryEmptyRemove()">Eliminar todos los elementos p de class="test"</button>
+      </div>
+
+    </section>
 
 
   </main>
